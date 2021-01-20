@@ -43,6 +43,7 @@ int id_database = Integer.parseInt(request.getParameter("id_database"));
 			request.setAttribute("id_database", id_database);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/ajoutTest.jsp" );
 			rd.forward(request, response);
+			return;
 			
 		}else {
 			if(action.equals("ajouter")) {
@@ -70,12 +71,14 @@ int id_database = Integer.parseInt(request.getParameter("id_database"));
 					session.setAttribute("list", Model.getListeCas());
 					RequestDispatcher rd = request.getRequestDispatcher( "WEB-INF/gestion.jsp" );
 					rd.forward(request, response);
+					return;
 				} catch (WrongCovidInputException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 					request.setAttribute("error", e.getMessage());
 					RequestDispatcher rd = request.getRequestDispatcher( "WEB-INF/ajoutTest.jsp" );
 					rd.forward(request, response);
+					return;
 				}
 				
 				

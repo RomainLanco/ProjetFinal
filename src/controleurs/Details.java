@@ -66,6 +66,7 @@ public class Details extends HttpServlet {
 		
 		RequestDispatcher rd = request.getRequestDispatcher( "WEB-INF/details.jsp" );
 		rd.forward(request, response);
+		return;
 	}
 
 	/**
