@@ -30,7 +30,8 @@ adresse :<input type="text" name="adresse" value="">
 telephone :<input type="text" name="telephone" value="">
 </div>
 <div>
-code postal :<input type="text" name="code_postale" value="">
+code postal :<input type="text" pattern="[0-9]{4}" name="code_postale" value="">
+
 </div>
 <input type="hidden" name="action" value="ajouter">
 
