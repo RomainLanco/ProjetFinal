@@ -30,7 +30,9 @@ public class VerifAuth {
 				
 				}
 			}
-
+			rs.close();
+			st.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
