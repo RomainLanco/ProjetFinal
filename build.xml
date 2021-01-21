@@ -2,21 +2,22 @@
 
 <project>
 	<target name="clean">
-		<delete dir="bin"/>
+		<delete dir="build\classes\covid\java"/>
 	</target>
 	<target name="compile">
-		<mkdir dir="bin"/>
-			<javac destdir="bin" srcdir="src" classpath="C:\Users\Administrator\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar"/>			
+		<mkdir dir="build\classes\covid\java"/>
+			<javac destdir="build\classes" srcdir="src\covid\java" classpath="C:\Users\Administrator\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\Administrator\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar"/>			
 	</target>
 	<target name="tests" depends="compile">
 		<junit>
 			<classpath>
 				<pathelement location="C:\Users\Administrator\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar"/>
 				<pathelement location="C:\Users\Administrator\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
-				<pathelement location="${basedir}\bin"/>
+				<pathelement location="${basedir}\build\classes"/>
 			</classpath>
 			<formatter type="xml"/>
-			<test name="tests.PanierTest" outfile="result"/>
+			<test name="covid.java.tests.CasTest" outfile="resultCasTest"/>
+			
 		</junit>
 	</target>
 </project>
