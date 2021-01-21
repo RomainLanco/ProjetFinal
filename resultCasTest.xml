@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="vmi456561" name="covid.java.tests.CasTest" skipped="0" tests="15" time="0.125" timestamp="2021-01-21T08:38:20">
+<testsuite errors="0" failures="0" hostname="vmi456561" name="covid.java.tests.CasTest" skipped="0" tests="15" time="0.173" timestamp="2021-01-21T09:19:43">
   <properties>
     <property name="sun.desktop" value="windows" />
     <property name="ant.library.dir" value="C:\Users\Administrator\Documents\apache-ant-1.10.7\lib" />
@@ -67,11 +67,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
     <property name="java.class.version" value="55.0" />
   </properties>
-  <testcase classname="covid.java.tests.CasTest" name="testCodePostaleNonEntier" time="0.016" />
-  <testcase classname="covid.java.tests.CasTest" name="testNomEspaceDevant" time="0.0" />
-  <testcase classname="covid.java.tests.CasTest" name="testCodePostaleLongueur6" time="0.015" />
+  <testcase classname="covid.java.tests.CasTest" name="testCodePostaleNonEntier" time="0.051" />
+  <testcase classname="covid.java.tests.CasTest" name="testNomEspaceDevant" time="0.005" />
+  <testcase classname="covid.java.tests.CasTest" name="testCodePostaleLongueur6" time="0.001" />
   <testcase classname="covid.java.tests.CasTest" name="testEtatInvalide" time="0.0" />
-  <testcase classname="covid.java.tests.CasTest" name="testCodePostaleCorrect" time="0.0" />
+  <testcase classname="covid.java.tests.CasTest" name="testCodePostaleCorrect" time="0.001" />
   <testcase classname="covid.java.tests.CasTest" name="testNomSansEspace" time="0.0" />
   <testcase classname="covid.java.tests.CasTest" name="testNomCorrect" time="0.0" />
   <testcase classname="covid.java.tests.CasTest" name="testTelephoneLongueur6" time="0.0" />
