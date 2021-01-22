@@ -38,7 +38,10 @@ public class VerifAuth {
 		
 		finally {
 			conn.close();
-			
+			if(st!=null) {
+				st.close();
+			}
+			if(rs!=null) rs.close();
 		}
 		
 		
