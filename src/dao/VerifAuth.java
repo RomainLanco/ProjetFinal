@@ -19,7 +19,7 @@ public class VerifAuth {
 		try {
 			st = conn.createStatement();
 			rs = st.executeQuery("select * from admin");
-			if (rs != null) {
+			if (st!=null && rs != null) {
 				
 				while (rs.next()) {
 					
@@ -36,13 +36,7 @@ public class VerifAuth {
 			
 		}
 		
-		finally {
-			conn.close();
-			if(st!=null) {
-				st.close();
-			}
-			if(rs!=null) rs.close();
-		}
+	
 		
 		
 		

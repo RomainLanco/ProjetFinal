@@ -1,6 +1,7 @@
 package controleurs;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -36,9 +37,16 @@ public class Authentification extends HttpServlet {
 		
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
-		boolean auth= VerifAuth.IsCompteValid(login, password);
+		boolean auth=false;
+		try {
+			auth = VerifAuth.IsCompteValid(login, password);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
 		
-		if(!auth) {
+		if(auth==false) {
 //			response.sendRedirect(request.getContextPath() + "authentif.jsp");
 			System.out.println("auth=false");
 			RequestDispatcher rd = request.getRequestDispatcher("/index.jsp" );
