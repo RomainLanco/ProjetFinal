@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class VerifAuth {
 	
 	
-	public static boolean IsCompteValid(String login, String password)  {
+	public static boolean IsCompteValid(String login, String password) throws SQLException  {
 		Connection conn = Connecteur.getConnection();
 		Statement st = null;
 		ResultSet rs = null;
@@ -36,6 +36,10 @@ public class VerifAuth {
 			
 		}
 		
+		finally {
+			conn.close();
+			
+		}
 		
 		
 		
